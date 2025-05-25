@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="./style/index.css">
+  <script defer src="./index.js"></script>
+</head>
+
+<body>
+  <h2>SPLI <br>TTER</h2>
+
+  <article class="card">
+    <section class="card__form">
+      <p>Bill</p>
+      <div class="card--form__input">
+        <img src="./images/icon-dollar.svg" alt="dollar-icon">
+        <input id="input__bill" type="number" placeholder="0">
+      </div>
+      <p>Select Tip %</p>
+      <div class="card__form--btn">
+        <input type="button" class="btn__form" value="5%">
+        <input type="button" class="btn__form" value="10%">
+        <input type="button" class="btn__form" value="15%">
+        <input type="button" class="btn__form" value="25%">
+        <input type="button" class="btn__form" value="50%">
+        <input id="btn--custom" type="button" class="btn__form btn--custom" value="Custom">
+      </div>
+      <p>Number of People</p>
+      <div class="card--form__input">
+        <img src="./images/icon-person.svg" alt="person-icon">
+        <input id="input__people" type="text" placeholder="0">
+      </div>
+    </section>
+
+    <section class="card__price">
+      <div class="card__price--tip">
+        <div>
+          <p>Tip Amount</p>
+          <span>/ person</span>
+        </div>
+        <div>
+          <h3>$<b id="tip--amount">0.00</b></h3>
+        </div>
+      </div>
+
+      <div class="card__price--total">
+        <div>
+          <p>Total</p>
+          <span>/ person</span>
+        </div>
+        <div>
+          <h3>$<b id="tip--total">0.00</b></h3>
+
+        </div>
+      </div>
+
+      <button id="btn--reset" class="disabled">RESET</button>
+
+    </section>
+  </article>
+</body>
+
+</html>

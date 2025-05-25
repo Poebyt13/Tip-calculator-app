@@ -1,0 +1,200 @@
+:root {
+    /* Primary */
+    --green-400: hsl(172, 67%, 45%);
+
+    /* Neutral */
+    --green-900: hsl(183, 100%, 15%);
+    --grey-500: hsl(186, 14%, 43%);
+    --grey-400: hsl(184, 14%, 56%);
+    --grey-200: hsl(185, 41%, 84%);
+    --grey-50: hsl(189, 47%, 97%);
+    --white: hsl(0, 100%, 100%);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+}
+
+body {
+    background-color: var(--grey-200);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    position: absolute;
+    top: 0;
+    margin-top: 6rem;
+    color: var(--green-900);
+}
+
+.card {
+    background-color: white;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 1rem 1rem 2rem;
+    border-radius: 10px;
+}
+
+.card__form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#input__bill, #input__people, #input--custom{
+    text-align: end;
+    background-color: var(--grey-50);
+    outline: none;
+    border: none;
+    padding: .7rem 1rem;
+    font-size: 1.3rem;
+    color: var(--green-900);
+    border-radius: 8px;
+    padding-left: 2.75rem;
+    width: 100%;
+}
+#input__bill::placeholder, #input__people::placeholder, #input--custom::placeholder{
+    color: var(--grey-400);
+}
+#input__bill:focus, #input__people:focus, #input--custom:focus{
+    outline: 2px solid var(--green-400);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.card__form p {
+    color: var(--grey-500);
+    margin-top: .5rem;
+    font-size: .9rem;
+}
+
+.card--form__input{
+    width: 100%;
+    position: relative;
+}
+.card--form__input img{
+    position: absolute;
+    top: 50%;
+    margin-left: 1.25rem;
+    transform: translateY(-50%);
+}
+
+.card__form--btn {
+    display: grid;
+    gap: .8rem;
+    grid-template-columns: repeat(3, 6.5rem);
+}
+
+.card__form--btn input {
+    background-color: var(--green-900);
+    color: white;
+    font-size: 1rem !important;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    padding: .35rem .5rem !important;
+    font-weight: 600;
+    transition-property: background-color, color;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+
+.card__form--btn input:hover{
+    background-color: var(--grey-200);
+    color: var(--green-900);
+}
+.card__form--btn input:last-child{
+    background-color: var(--grey-50);
+    color: var(--grey-500);}
+
+.btn--selected{
+    color: var(--green-900) !important;
+    background-color: var(--green-400) !important;
+}
+
+
+.card__price {
+    background-color: var(--green-900);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+.card__price > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+.card__price p{
+    color: white;
+    font-size: .7rem;
+}
+.card__price span{
+    font-size: .7rem;
+    color: var(--grey-500);
+}
+.card__price h3{
+    color: var(--green-400);
+    font-size: 1.7rem;
+}
+
+.card__price button{
+    cursor: pointer;
+    margin-top: auto;
+    background-color: var(--green-400);
+    color: var(--green-900);
+    outline: none;
+    border: none;
+    padding: .5rem 0;
+    border-radius: 10px;
+}
+.disabled {
+    background-color: hsl(183, 60%, 24%) !important;
+    pointer-events: none;
+}
+
+/* responsive */
+
+@media screen and (max-width: 700px){
+    body{
+        align-items: end;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h2{
+        margin: 2rem 0 1rem 0;
+        position: static;
+    }
+    .card {
+        padding: 1.5rem;
+        width: 100%;
+        flex-direction: column;
+    }
+    .card__form--btn{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card__form--btn input{
+        padding: .7rem 1rem !important;
+    }
+}
